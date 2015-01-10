@@ -1,13 +1,13 @@
 {
   "name": "we-plugin-activity",
   "description": "We.js plugin we-plugin-activity",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {
     "async": "^0.9.0",
     "lodash": "^2.4.1",
-    "we-helpers": "^0.0.5"
+    "we-helpers": ">=0.0.5"
   },
   "devDependencies": {
     "mocha": "^1.18.2",
@@ -35,6 +35,7 @@
     "we.js",
     "wejs",
     "plugin",
-    "sails.js"
+    "sails.js",
+    "activity"
   ]
 }
