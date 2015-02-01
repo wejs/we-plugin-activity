@@ -1,13 +1,13 @@
 {
   "name": "we-plugin-activity",
   "description": "We.js plugin we-plugin-activity",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {
     "async": "^0.9.0",
     "lodash": "^2.4.1",
-    "we-helpers": ">=0.0.5"
+    "we-helpers": ">=0.0.7"
   },
   "devDependencies": {
     "mocha": "^1.18.2",
@@ -26,11 +26,6 @@
     "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
     "prepublish": "npm prune"
   },
-  "files": [
-    "api",
-    "config",
-    "lib"
-  ],
   "keywords": [
     "we.js",
     "wejs",
