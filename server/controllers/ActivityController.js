@@ -8,8 +8,11 @@
 var actionUtil = require('we-helpers').actionUtil;
 
 module.exports = {
+  _config: {
+    rest: false
+  },
 
-  index: function (req, res) {
+  find: function (req, res) {
     var sails = req._sails;
     var Contact = sails.models.contact;
     var Activity = sails.models.activity;

@@ -14,7 +14,8 @@ module.exports = {
     },
     // user how did the activity
     actor: {
-      type: 'string'
+      model: 'user',
+      required: true
     },
 
     // activity object type exemple: post, user, comment ...
@@ -28,22 +29,18 @@ module.exports = {
       type: 'string'
     },
 
-    // sails.js associations
-    post: {
-      model: 'post',
-      via: 'activities'
+    modelName: {
+      type: 'string',
+      required: true
     },
 
-    user: {
-      type: 'string'
+    modelId: {
+      type: 'string',
+      required: true
     },
 
-    comment: {
-      model: 'comment'
-    },
     // Override toJSON instance method
     toJSON: function() {
-
       var obj = this.toObject();
 
       if( _.isObject(obj.actor) ){
@@ -61,13 +58,13 @@ module.exports = {
 
   beforeCreate: function(record, next) {
     // sanitize
-    record = SanitizeHtmlService.sanitizeAllAttr(record);
+    SanitizeHtmlService.sanitizeAllAttr(record);
     next();
   },
 
   beforeUpdate: function(record, next) {
     // sanitize
-    record = SanitizeHtmlService.sanitizeAllAttr(record);
+    SanitizeHtmlService.sanitizeAllAttr(record);
     next();
   },
 
