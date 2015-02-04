@@ -1,7 +1,7 @@
 {
   "name": "we-plugin-activity",
   "description": "We.js plugin we-plugin-activity",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {
@@ -32,5 +32,8 @@
     "plugin",
     "sails.js",
     "activity"
-  ]
+  ],
+  "sails": {
+    "isHook": true
+  }
 }
